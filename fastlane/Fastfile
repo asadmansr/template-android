@@ -1,0 +1,50 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "Compile debug and test sources"
+  lane :compile do
+    gradle(task: "compileDebugSources")
+    gradle(task: "compileDebugUnitTestSources")
+    gradle(task: "compileDebugAndroidTestSources")
+  end
+
+  desc "Execute Android lint"
+  lane :lint do
+    gradle(task: "lintDebug")
+  end
+
+  desc "Assemble source and test APKs"
+  lane :assemble do
+    gradle(task: "assembleDebug")
+    gradle(task: "assembleDebugAndroidTest")
+  end
+
+  desc "Execute unit tests"
+  lane :unit_test do
+    gradle(task: "testDebugUnitTest")
+  end
+
+  desc "Execute instrumentation test on Emulator"
+  lane :instrumentation_test do
+    automated_test_emulator_run(
+      AVD_setup_path: "fastlane/avd_setup.json",
+      AVD_recreate_new: false,
+      AVD_clean_after: false,
+      gradle_task: "connectedDebugAndroidTest")
+  end
+end
