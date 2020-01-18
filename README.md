@@ -41,3 +41,13 @@ To get started with fastlane, refer to the [Fastlane Summary](docs/fastlane.md).
 GitHub Actions allows the creation of custom workflows within the GitHub repository. These custom workflows can automate specific tasks within GitHub and build out a continuous integration and continuous deployment (CI/CD) pipeline. With this template, the CI pipeline is set up to validate new changes on pull requests to the master branch.
 
 To get started with GitHub Actions, refer to the [GitHub Actions Summary](docs/github-actions.md).
+
+</br>
+
+## Templates
+
+Creating issues and pull requests are common practices when working on a project. The creation of issues and pull requests comes with a pre-set template to ensure all of the required information are captured in the correct manner. The templates for issues and pull request can be found in the .github folder. 
+
+![](docs/images/issue_template.png)
+
+</br>
