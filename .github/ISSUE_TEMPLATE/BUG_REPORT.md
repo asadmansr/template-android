@@ -1,6 +1,6 @@
 ---
 name: Bug Report 🐛 
-description: Report a bug or something that is not working as expected
+about: Report a bug or something that is not working as expected
 
 ---
 
@@ -30,7 +30,7 @@ description: Report a bug or something that is not working as expected
 ```
 
 ### Logs
-<!-- Please include any logs, screentshot or information that will be helpful to debug -->
+<!-- Please include any logs, screenshot or information that will be helpful to debug -->
 ```
 <ADD-LOGS-HERE>
 ```
